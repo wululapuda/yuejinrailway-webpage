@@ -39,7 +39,7 @@
         const navItems = document.querySelectorAll('.nav_a .nav_items');
         let targetBtn = null;
         navItems.forEach(item => {
-            if (item.textContent.trim() === '今日运势') {
+            if (item.textContent.trim() === '今日运势~') {
                 targetBtn = item.closest('.nav_a');
             }
         });
