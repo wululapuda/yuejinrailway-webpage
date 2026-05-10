@@ -93,19 +93,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
     user-select: none;
-    transition: background-color 0.4s,color 0.4s;
     color:#7E96B3;
+    z-index:10;
+    position:relative;
+    transition: color 0.18s,transform 0.18s ease-out;
+    overflow: hidden;
+    border-radius: 3px;
 }
 
 .nav_items:hover {
-    background-color:#1384D6;
-    color:white;
+    color:#007ACC;
+    transform: translateY(-8%);
 }
 
-.nav_items:active {
-    background-color:#55aeee;
+.nav_items::before {
+    content: "";
+    position:absolute;
+    width: 100%;
+    height:100%;
+    background-color:#007ACC;
+    z-index:-1;
+    transform:translateY(100%);
+    transition: transform 0.18s ease-out;
+}
+
+.nav_items:hover::before {
+    transform: translateY(85%);
 }
 
 .nav_items_more {
