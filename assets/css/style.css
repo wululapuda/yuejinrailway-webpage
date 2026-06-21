@@ -299,7 +299,7 @@ body {
     left:0;
     top:0;
     width: 150%;
-    height:100%;
+    height:110%;
     background-color:#007ACC;
     z-index:-1;
     border-radius: 10px;
@@ -495,38 +495,42 @@ body {
 
 .secDisp {
     box-sizing: border-box;
-    height:800px;
+    height:700px;
     background-repeat: no-repeat;
     background-size:cover; 
     background-attachment: fixed;
-    padding:50px;
+
+    overflow-y: hidden;
+    box-sizing: border-box;
+    background-color: white;
+    position:relative;
 }
 
-.secDisp h1 {
+.secDisp .dispTitle {
+    position: absolute;
+    width: 300px;
+    height:60px;
+    border-radius: 7px;
+    background-color: rgba(255,255,255,0.8);
+    top:40px;
+    left:40px;
+    display:flex;
+    align-items: center;
+    box-sizing: border-box;
+    user-select: none;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.dispTitle h1 {
     color:#0067B8;
     font-size:32px;
 }
 
-.secDisp_body {
-    display: flex;
-    overflow-y: hidden;
-    height: 600px;
-    box-sizing: border-box;
-    justify-content: space-around;
-    border-radius: 7px;
-    background-color: white;
-    box-shadow: 1px 1px 10px #888888;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    background-repeat: no-repeat;
-    background-size:cover; 
-    position:relative;
-}
-
-.secDisp_body .dispText {
+.secDisp .dispText {
     position: absolute;
-    left:20px;
-    bottom:20px;
+    right:175px;
+    bottom:40px;
     width:200px;
     height:45px;
     background-color: rgba(255,255,255,0.8);
@@ -540,10 +544,10 @@ body {
     user-select: none;
 }
 
-.secDisp_body .dispMenu {
+.secDisp .dispMenu {
     position: absolute;
-    right:85px;
-    bottom:20px;
+    right:105px;
+    bottom:40px;
     width:45px;
     height:45px;
     border-radius: 5px;
@@ -559,13 +563,13 @@ body {
     transition: background-color 0.2s,color 0.2s;
 }
 
-.secDisp_body .dispMenu:hover {
+.secDisp .dispMenu:hover {
     color:white;
     background-color: #007ACC;
 }
 
-.secDisp_body .dispMenuRight {
-    right:20px;
+.secDisp .dispMenuRight {
+    right:40px;
 }
 
 /* 跃进铁道工作组成员模块 */
