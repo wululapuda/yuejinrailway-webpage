@@ -21,7 +21,7 @@ const imgTexts = [
   '毛号HXD3D',
   '小站一角',
   'HXD1擦肩而过',
-  '高光下的GK1E'
+  'GK1E 型机车'
 ];
 
 let currentIndex = 6;
