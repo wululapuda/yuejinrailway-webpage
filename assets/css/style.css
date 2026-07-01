@@ -65,6 +65,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    margin-top: 40px;
 }
 
 .nav_left {
@@ -327,6 +328,7 @@ body {
 .secInfo h1 {
     color:#0067B8;
     font-size:32px;
+    margin-top:0;
 }
 
 .secInfo_body {
@@ -413,7 +415,7 @@ body {
     width:34px;
     height:34px;
     border-radius: 4px;
-    border:2px solid rgba(0,0,0,0.4);
+    border:2px solid rgba(0,0,0,0.2);
     flex-grow: 0;
 }
 
@@ -590,6 +592,7 @@ body {
     width:100%;
     text-align: center;
     font-size:32px;
+    margin-top: 0;
 }
 
 .secMember_body {
@@ -623,16 +626,13 @@ body {
     text-decoration:none;
 }
 
-.secMember_item h3,p {
-    margin-top:10px;
-    text-decoration: none;
-}
-
 .secMember_item h3 {
     font-size:20px;
     color:#0067B8;
     width: 100%;
     text-align: center;
+    margin-top:10px;
+    text-decoration: none;
 }
 
 .secMember_item p {
@@ -640,6 +640,8 @@ body {
     margin-left:0;
     color:#888888;
     text-align:center;
+    margin-top:10px;
+    text-decoration: none;
 }
 
 .secMember_item img {
@@ -653,15 +655,14 @@ body {
 
 /* 页脚模块 */
 
-.secFooter {
+.secNote {
     width: 100%;
-    margin-top:50px;
     padding:40px;
     box-sizing: border-box;
     background-color:rgba(237,237,237,0);
 }
 
-.secFooter h1{
+.secNote h1{
     color:#007ACC;
     font-size:32px;
     width:100%;
@@ -670,7 +671,7 @@ body {
     text-align: center;
 }
 
-.secFooter h4 {
+.secNote h4 {
     color:#3C5675;
     font-size:20px;
     word-wrap: break-word;
@@ -683,15 +684,12 @@ body {
     box-sizing: border-box;
 }
 
-.secFooter p {
+.secNote p {
     color:#56626e;
     word-wrap: break-word;
     word-break: break-all;
     padding:0;
     width:100%;
-}
-
-.secFooter_text {
     font-size:18px;
     max-width: 600px;
     margin:0 auto;
@@ -700,13 +698,54 @@ body {
     user-select: none;
 }
 
-.secFooter_copyright {
+.secFooter {
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding:30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+}
+
+.secFooter img {
+    height:50px;
+    pointer-events: none;
+    user-select: none;
+    margin-left:30px;
+}
+
+.secFooter p {
+    color:#56626e;
     font-size:15px;
-    max-width: 500px;
-    text-align: center;
-    margin:0 auto;
-    margin-bottom:40px;
-    margin-top:50px;
+    user-select: none;
+}
+
+.secFooter_info {
+    display:flex;
+    box-sizing: border-box;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.secFooter .user {
+    display: flex;
+    align-items: center;
+}
+
+.secFooter .user img {
+    width:28px;
+    height:28px;
+    margin-left:10px;
+    margin-right:10px;
+    border-radius: 4px;
+    border:2px solid rgba(0,0,0,0.2);
+    flex-grow: 0;
 }
 
 @media screen and (max-width: 700px) {
@@ -762,3 +801,84 @@ body {
      } 
 }
 
+.secGood {
+    position: fixed;
+    height:40px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #007ACC;
+    backdrop-filter: blur(10px);
+    margin:0px;
+    z-index: 20;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.secGoodLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.secGoodLeft>p {
+    color:white;
+    margin:0;
+    margin-left:30px;
+    user-select: none;
+    margin-right:10px;
+    min-width: 348px;
+}
+
+.secGood .button {
+    color:white;
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    user-select: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 4px;
+    transition: background-color 0.4s;
+}
+
+.secGood .button:hover {
+    background-color: #1194eb;
+}
+
+.secGood .button>a {
+    margin:0;
+    padding: 0;
+    color:white;
+    text-decoration: none;
+}
+
+.secGoodRight {
+    padding-right:30px;
+}
+
+.secGoodRight>p {
+    color:rgb(230, 230, 230);
+    padding: 0;
+    margin:0;
+    user-select: none;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media screen and (max-width: 1400px) {
+    .secGoodRight {
+        padding-right: 10px;
+    }
+
+    .secGoodLeft>p {
+        margin-left:10px;
+    }
+    
+    .indisp {
+        display: none;
+    }
+}
