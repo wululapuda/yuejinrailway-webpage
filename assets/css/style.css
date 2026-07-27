@@ -1,66 +1,135 @@
-/* 跃进铁道工作组 苏秋 2026年5月9日 */
-/* 有关网页的全局设置 */
+/* ============================================================
+   跃进铁道工作组官方网站CSS
+   苏秋 2026年7月26日
+   此CSS全部内容均由本人手动编写，AI只起格式化等辅助作用
+   ============================================================ */
+
+/* ---------- 全局设定 ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color:#FFF;
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+    background-color: #FFF;
     animation: fadeInAnimation ease 1.2s;
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     background-image: url('../img/background.png');
     background-repeat: no-repeat;
-    background-size:cover; 
+    background-size: cover;
     background-attachment: fixed;
 }
 
-.highLightA {
+/* ---------- 滚动条 ---------- */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 103, 184, 0.7);
+    border-radius: 3px;
+}
+
+/* ---------- 高亮标签 ---------- */
+.hLA {
     background-color: #0067B8;
-    color:white;
-    padding-left:5px;
+    color: white;
+    padding-left: 5px;
     padding-right: 5px;
     font-weight: 600;
     margin-right: 6px;
     border-radius: 5px;
 }
 
-.highLightB {
+.hLB {
     background-color: #0067B8;
-    color:white;
-    padding-left:5px;
+    color: white;
+    padding-left: 5px;
     padding-right: 5px;
     font-weight: 500;
     margin-right: 6px;
     border-radius: 4px;
 }
 
-::-webkit-scrollbar{
-    width: 7px;
-    height: 7px;
-    background-color:rgba(0,0,0,0);
+/* ============================================================
+   顶栏庆祝 (secGood)
+   ============================================================ */
+.secGood {
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    background-color: #007ACC;
+    backdrop-filter: blur(10px);
+    z-index: 20;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
-::-webkit-scrollbar-thumb{
-    width: 10px;
-    height: 10px;
-    background-color:rgba(0,103,184,0.7);
-    border-radius: 3px;
+.secGoodLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
-/* 导航栏样式 */
+.secGoodLeft > p {
+    color: white;
+    margin: 0 10px 0 30px;
+    user-select: none;
+    min-width: 348px;
+}
 
+.secGood .button {
+    color: white;
+    padding: 3px 8px;
+    user-select: none;
+    border-radius: 4px;
+    margin-right: 4px;
+    transition: background-color 0.4s;
+}
+
+.secGood .button:hover {
+    background-color: #1194eb;
+}
+
+.secGood .button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.secGoodRight {
+    padding-right: 30px;
+}
+
+.secGoodRight > p {
+    color: rgb(230, 230, 230);
+    margin: 0;
+    user-select: none;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ============================================================
+   主导航栏 (secNav)
+   ============================================================ */
 .secNav {
     position: fixed;
-    height:70px;
+    height: 70px;
     width: 100%;
-    box-sizing: border-box;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    margin: 0px;
-    box-shadow:0px 0px 6px 2px #AAAAAA;
-    padding:10px;
-    display:flex;
+    box-shadow: 0px 0px 6px 2px #AAAAAA;
+    padding: 10px;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -77,60 +146,58 @@ body {
 }
 
 .nav_left img {
-    height:50px;
+    height: 50px;
     pointer-events: none;
 }
 
 .nav_right {
-    flex:1;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    box-sizing: border-box;
-    height:100%;
+    height: 100%;
 }
 
 .nav_a {
     text-decoration: none;
-    height:50px;
+    height: 50px;
 }
 
 .nav_an {
     text-decoration: none;
-    height:50px;
+    height: 50px;
     width: 90px;
 }
 
 .nav_items {
-    flex:0;
-    min-width: 70px;
+    flex: 0 0 auto;
+    min-width: 60px;
     margin-right: 10px;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
-    color:#7E96B3;
-    z-index:10;
-    position:relative;
-    transition: color 0.18s,transform 0.18s ease-out;
+    color: #7E96B3;
+    position: relative;
     overflow: hidden;
+    transition: color 0.18s, transform 0.18s ease-out;
     border-radius: 3px;
 }
 
 .nav_items:hover {
-    color:#007ACC;
+    color: #007ACC;
     transform: translateY(-8%);
 }
 
 .nav_items::before {
     content: "";
-    position:absolute;
+    position: absolute;
     width: 100%;
-    height:100%;
-    background-color:#007ACC;
-    z-index:-1;
-    transform:translateY(100%);
+    height: 100%;
+    background-color: #007ACC;
+    z-index: -1;
+    transform: translateY(100%);
     transition: transform 0.18s ease-out;
 }
 
@@ -138,24 +205,23 @@ body {
     transform: translateY(85%);
 }
 
+/* 移动端菜单按钮*/
 .nav_items_more {
-    flex:0;
     min-width: 70px;
     margin-right: 10px;
-    height:100%;
-    display: flex;
+    height: 100%;
+    display: none;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
     user-select: none;
-    color:#7E96B3;
-    transition: background-color 0.4s,color 0.4s;
-    display: none;
+    color: #7E96B3;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .nav_items_more:hover {
-    background-color:#1384D6;
-    color:white;
+    background-color: #1384D6;
+    color: white;
 }
 
 .nav_items_more:hover .nav_menu {
@@ -165,114 +231,98 @@ body {
     justify-content: flex-start;
     align-items: center;
     animation: fadeInAnimation ease 0.4s;
-    animation-iteration-count: 1; 
-    animation-fill-mode: forwards; 
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .nav_items_more:active {
-    background-color:#55aeee;
-    color:white;
+    background-color: #55aeee;
+    color: white;
 }
 
 .nav_menu {
     position: fixed;
     display: none;
-    box-sizing: border-box;
-    margin:0;
-    width:90px;
-    min-height:100px;
-    background-color: rgba(255,255,255,0.9);
+    width: 90px;
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    right:10px;
-    top:60px;
+    right: 10px;
+    top: 60px;
     border-radius: 5px;
-    box-shadow:0px 0px 4px 1px #AAAAAA;
+    box-shadow: 0px 0px 4px 1px #AAAAAA;
 }
 
 .nav_menu_items {
     display: flex;
-    color:#7E96B3;
+    color: #7E96B3;
     min-height: 50px;
     align-items: center;
     justify-content: center;
     user-select: none;
-    width:100%;
-    transition: background-color 0.4s,color 0.4s;
+    width: 100%;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .nav_menu_items:hover {
     background-color: #1384D6;
-    color:white;
+    color: white;
 }
 
 .nav_menu_items:active {
     background-color: #55aeee;
-    color:white;
+    color: white;
 }
 
-/* 首页模块 */
-
+/* ============================================================
+   首页板块 (secMain)
+   ============================================================ */
 .secMain {
-    width:100%;
-    box-sizing: border-box;
-    padding:25px;
-    margin-bottom:80px;
+    width: 100%;
+    padding: 25px;
+    padding-top: 100px;
+    margin-bottom: 50px;
     user-select: none;
-    padding-top:95px;
 }
 
 .secMain img {
-    width:400px;
-    margin-left:calc(50% - 200px);
-    margin-top:80px;
+    width: 400px;
+    margin: 80px auto 0;
+    display: block;
     pointer-events: none;
 }
 
-.secMain h1{
-    color:#007ACC;
-    font-size:32px;
-    text-align:center;
-    width:100%;
-    padding:0;
-    margin:0;
-    margin-top:30px;
+.secMain h1 {
+    color: #007ACC;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 30px;
+    font-family: serif;
 }
 
 .secMain p {
-    color:#748596;
-    font-size:18px;
+    color: #748596;
+    font-size: 18px;
     word-wrap: break-word;
-    word-break: break-all;
     width: 300px;
-    margin:0;
-    margin-top:30px;
-    margin-left:calc(50% - 150px);
-    padding:0;
+    margin: 30px auto 0;
     text-align: center;
 }
 
-.secMain_text {
-    color:#748596;
-    font-size:15px;
-    margin:0;
-    margin-top:30px;
-    padding:0;
-    text-align: center;
-    width:100%;
-}
+/* button部分 */
 
-.secMain_btnBlock {
-    padding:0;
-    margin-top:56px;
+.secMain .btnBlock {
+    padding: 0;
+    margin-top: 56px;
     text-align: center;
 }
 
-.main-btn {
+.btn {
     text-transform: uppercase;
     font-size: 14px;
     border-width: 2px;
-    border-color:#4d5b6c;
-    color:#4d5b6c;
+    border-color: #4d5b6c;
+    color: #4d5b6c;
     user-select: none;
     border-style: solid;
     border-radius: 5px;
@@ -280,70 +330,182 @@ body {
     display: inline-block;
     line-height: 1em;
     margin: 0 8px;
-    margin-top:8px;
+    margin-top: 8px;
     transition: border-color 0.4s, color 0.4s, box-shadow 0.4s;
     text-decoration: none;
-    position:relative;
+    position: relative;
     z-index: 0;
     overflow: hidden;
 }
 
-.main-btn:hover {
-    border-color:#007ACC;
-    color:white;
+.btn:hover {
+    border-color: #007ACC;
+    color: white;
     box-shadow: 0px 0px 4px #AAAAAA;
 }
 
-.main-btn::before {
+.btn::before {
     content: "";
     position: absolute;
-    left:0;
-    top:0;
+    left: 0;
+    top: 0;
     width: 150%;
-    height:110%;
-    background-color:#007ACC;
-    z-index:-1;
+    height: 110%;
+    background-color: #007ACC;
+    z-index: -1;
     border-radius: 10px;
     transform: translateX(100%);
     transition: transform 0.34s ease-out;
 }
 
-.main-btn:hover::before {
-    transform:translateX(-10%);
+.btn:hover::before {
+    transform: translateX(-10%);
+}
+/* ============================================================
+   介绍模块 (secIntro) 
+   ============================================================ */
+.secIntro {
+    width: 100%;
+    padding: 50px 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #e0e0e0;
+    display:flex;
 }
 
-/* 信息模块 */
+.secIntro h1 {
+    color: #0067B8;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
 
+.secIntro .left > p {
+    color:#3C5675;
+    text-align: justify;
+    max-width: 700px;
+    margin-bottom: 14px;
+}
+
+.secIntro .left {
+    padding:0;
+    flex-grow: 1;
+    padding-right:50px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.secIntro .right {
+    padding: 0;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.secIntro .right .item {
+    box-shadow: 0px 0px 2px #888888;
+    background-color: #fff;
+    height: 270px;
+    width: 180px;
+    margin-left: 28px;
+    transition: all 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    user-select:none;
+    position: relative;
+}
+
+.secIntro .right .item img {
+    width: 180px;
+    height: 180px;
+    pointer-events: none;
+    z-index:2;
+}
+
+.secIntro .right .item:hover {
+    box-shadow: 1px 1px 10px #888888;
+
+}
+
+.secIntro .right .item h3 {
+    font-size: 28px;
+    color: #0067B8;
+    font-family: serif;
+    z-index:2;
+    transition: all 0.2s;
+}
+
+.secIntro .right .item p {
+    color:#3C5675;
+    margin-bottom:10px;
+    z-index:2;
+    transition: all 0.2s;
+}
+
+.secIntro .right .item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    height: 110%;
+    background-color: #007ACC;
+    z-index: 1;
+    transform: translateY(-40%);
+    transition: transform 0.2s ease-out;
+}
+
+.secIntro .right .item:hover::before {
+    transform: translateY(0);
+}
+
+.secIntro .right .item:hover {
+    h3 {
+        color:white;
+    }
+
+    p {
+        color:white;
+    }
+}
+/* ============================================================
+   内容卡片模块 (secInfo) 
+   ============================================================ */
 .secInfo {
-    width:100%;
-    box-sizing: border-box;
-    padding-left:80px;
-    padding-right:80px;
-    padding-top:35px;
-    padding-bottom: 35px;
-    margin-top:0;
-    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    padding: 35px 80px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .secInfo h1 {
-    color:#0067B8;
-    font-size:32px;
-    margin-top:0;
+    color: #0067B8;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .secInfo_body {
-    display:flex;
-	overflow-y: hidden;
-	height:320px;
-    box-sizing: border-box;
+    display: flex;
+    overflow-y: hidden;
+    height: 320px;
 }
 
+/* 反向布局（用于部分模块） */
 .secInfo_reverse {
-    background-color:rgba(237,237,237,0);
+    background-color: rgba(237, 237, 237, 0);
 }
 
 .secInfo_reverse h1 {
-    display:flex;
+    display: flex;
     flex-direction: row-reverse;
 }
 
@@ -356,253 +518,204 @@ body {
     user-select: none;
 }
 
+/* 单个卡片 */
 .secInfo_item {
     box-shadow: 0px 0px 2px #888888;
     background-color: #fff;
-    height:270px;
-    width:300px;
-    flex-grow: 0;
-    margin-left:14px;
-    margin-right:14px;
-    margin-top:20px;
-    border-radius: 10px;
+    height: 270px;
+    width: 300px;
+    margin: 20px 14px 0;
     transition: all 0.2s;
     overflow: hidden;
-}
-
-.secInfo_item h3 {
-    margin-left:10px;
-    margin-top:10px;
-    text-decoration: none;
-    font-size:20px;
-    color:#0067B8;
-    margin-bottom: 0;
-}
-
-.secInfo_item img {
-    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .secInfo_item > img {
-    width:300px;
-    height:170px
+    width: 300px;
+    height: 170px;
+    pointer-events: none;
+}
+
+.secInfo_item h3 {
+    margin: 0 0 0 10px;
+    font-size: 20px;
+    color: #0067B8;
 }
 
 .secInfo_item:hover {
     box-shadow: 1px 1px 10px #888888;
-    transform: translateY(-1%);
+    transform: translateY(-2%);
 }
 
+/* 作者信息 */
 .secInfo_Author {
     display: flex;
     flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 0 2px 12px 12px;
+    margin-top: 2px;
 }
 
 .secInfo_Author p {
-    flex-grow: 0;
-    margin-bottom:0;
-    margin-right: 10px;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color:rgb(136, 136, 136);;
+    flex-grow: 1;
+    color: rgb(136, 136, 136);
+    margin: 0;
 }
 
 .secInfo_Author img {
-    margin-right:10px;
-    margin-top: 10px;
-    width:34px;
-    height:34px;
+    width: 32px;
+    height: 32px;
     border-radius: 4px;
-    border:2px solid rgba(0,0,0,0.2);
-    flex-grow: 0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+    flex-shrink: 0;
 }
 
-
+/* 查看更多按钮 */
 .secInfo_moreBtn {
     box-shadow: 0px 0px 2px #888888;
-    background-color: rgba(255,255,255,0);
-    height:270px;
-    width:140px;
-    flex-grow: 0;
-    margin-left:14px;
-    margin-right:14px;
-    margin-top:20px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 270px;
+    width: 140px;
+    margin: 20px 14px 0;
     transition: all 0.2s;
     overflow: hidden;
-    display:flex;
-    box-sizing: border-box;
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    color:#7E96B3;
+    color: #7E96B3;
     user-select: none;
 }
 
 .secInfo_moreBtn .btnMA {
-    font-size:46px;
+    font-size: 46px;
 }
 
 .secInfo_moreBtn .btnMB {
-    margin-top:10px;
+    margin-top: 10px;
 }
 
 .secInfo_moreBtn:hover {
     box-shadow: 1px 1px 10px #888888;
-    background-color: rgba(0, 103, 184,0.8);;
-    color:white;
+    background-color: rgba(0, 103, 184, 0.8);
+    color: white;
 }
 
-/* 视频展示模块 */
-
+/* ============================================================
+   视频展示模块 (secVideo)
+   ============================================================ */
 .secVideo {
-    width:100%;
-    box-sizing: border-box;
-    padding-left:80px;
-    padding-right:80px;
-    padding-top:35px;
-    padding-bottom: 45px;
-    margin-top:0;
-    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    padding: 35px 80px 45px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .secVideo h1 {
-    color:#0067B8;
-    font-size:32px;
-    display:flex;
+    color: #0067B8;
+    font-size: 32px;
+    display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 .secVideo_body {
-    display:flex;
-	overflow-y: hidden;
-	height:440px;
-    box-sizing: border-box;
+    display: flex;
+    overflow-y: hidden;
+    height: 440px;
     justify-content: center;
 }
 
 .secVideo_body iframe {
     min-width: 800px;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px #888888;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
-/* 图片展示模块 */
-
+/* ============================================================
+   背景大图展示模块 (secDisp)
+   ============================================================ */
 .secDisp {
-    box-sizing: border-box;
-    height:700px;
+    height: 700px;
     background-repeat: no-repeat;
-    background-size:cover; 
+    background-size: cover;
     background-attachment: fixed;
-
     overflow-y: hidden;
-    box-sizing: border-box;
     background-color: white;
-    position:relative;
-}
-
-.secDisp .dispTitle {
-    position: absolute;
-    width: 300px;
-    height:60px;
-    border-radius: 7px;
-    background-color: rgba(255,255,255,0.8);
-    top:40px;
-    left:40px;
-    display:flex;
-    align-items: center;
-    box-sizing: border-box;
-    user-select: none;
-    box-sizing: border-box;
-    justify-content: center;
-}
-
-.dispTitle h1 {
-    color:#0067B8;
-    font-size:32px;
+    position: relative;
 }
 
 .secDisp .dispText {
     position: absolute;
-    right:175px;
-    bottom:40px;
-    width:200px;
-    height:45px;
-    background-color: rgba(255,255,255,0.8);
+    left: 50px;
+    top: 40px;
     border-radius: 5px;
-    display:flex;
+    display: flex;
     align-items: center;
-    box-sizing: border-box;
-    font-size: 24px;
-    padding-left:20px;
-    color:#56626e;
+    font-size: 50px;
+    color: white;
     user-select: none;
+    font-family: serif;
+    font-weight: 600;
+    text-shadow: 0 0 4px #888888;
 }
 
 .secDisp .dispMenu {
     position: absolute;
-    right:105px;
-    bottom:40px;
-    width:45px;
-    height:45px;
+    right: 105px;
+    bottom: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
     font-size: 18px;
-    box-sizing: border-box;
     overflow: hidden;
-    z-index:0;
-    transition: background-color 0.2s,color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .secDisp .dispMenu:hover {
-    color:white;
+    color: white;
     background-color: #007ACC;
 }
 
 .secDisp .dispMenuRight {
-    right:40px;
+    right: 40px;
 }
 
-/* 跃进铁道工作组成员模块 */
-
+/* ============================================================
+   团队成员模块 (secMember)
+   ============================================================ */
 .secMember {
-    width:100%;
-    box-sizing: border-box;
-    padding-left:40px;
-    padding-right:40px;
-    padding-top:35px;
-    padding-bottom: 35px;
-    margin-top:0;
-    background-color: rgba(255,255,255,0.7);
+    width: 100%;
+    padding: 35px 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .secMember h1 {
-    color:#0067B8;
-    width:100%;
+    color: #0067B8;
     text-align: center;
-    font-size:32px;
+    font-size: 32px;
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .secMember_body {
-    display:flex;
-	overflow-y: hidden;
-	min-height:320px;
-    box-sizing: border-box;
-    flex-wrap:wrap;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     max-width: 1000px;
+    margin: 0 auto;
+    min-height: 320px;
 }
 
 .secMember_body a {
@@ -613,39 +726,36 @@ body {
 .secMember_item {
     box-shadow: 0px 0px 2px #888888;
     background-color: #fff;
-    height:270px;
-    width:170px;
-    flex-grow: 0;
-    margin-left:15px;
-    margin-right:15px;
-    margin-top:20px;
-    margin-bottom:10px;
-    border-radius: 10px;
+    height: 270px;
+    width: 170px;
+    margin: 20px 15px 10px;
     transition: all 0.2s;
     overflow: hidden;
-    text-decoration:none;
-}
-
-.secMember_item h3 {
-    font-size:20px;
-    color:#0067B8;
-    width: 100%;
-    text-align: center;
-    margin-top:10px;
     text-decoration: none;
-}
-
-.secMember_item p {
-    font-size:15px;
-    margin-left:0;
-    color:#888888;
-    text-align:center;
-    margin-top:10px;
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .secMember_item img {
     pointer-events: none;
+    display: block;
+    width: 170px;
+    height: 170px;
+}
+
+.secMember_item h3 {
+    font-size: 20px;
+    color: #0067B8;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.secMember_item p {
+    font-size: 15px;
+    color: #888888;
+    text-align: center;
+    margin-bottom: 14px;
 }
 
 .secMember_item:hover {
@@ -653,51 +763,43 @@ body {
     transform: translateY(-1%);
 }
 
-/* 页脚模块 */
-
+/* ============================================================
+   版权声明模块 (secNote)
+   ============================================================ */
 .secNote {
     width: 100%;
-    padding:40px;
-    box-sizing: border-box;
-    background-color:rgba(237,237,237,0);
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
-.secNote h1{
-    color:#007ACC;
-    font-size:32px;
-    width:100%;
-    padding:0;
-    margin:0;
+.secNote h1 {
+    color: #007ACC;
+    font-size: 32px;
     text-align: center;
+    margin: 0;
 }
 
 .secNote h4 {
-    color:#3C5675;
-    font-size:20px;
-    word-wrap: break-word;
-    margin:0;
-    padding:0;
-    margin-top:20px;
+    color: #3C5675;
+    font-size: 20px;
     text-align: center;
-    font-weight:500;
-    width:100%;
-    box-sizing: border-box;
+    font-weight: 500;
+    margin-top: 20px;
 }
 
 .secNote p {
-    color:#56626e;
-    word-wrap: break-word;
-    word-break: break-all;
-    padding:0;
-    width:100%;
-    font-size:18px;
+    color: #56626e;
+    font-size: 18px;
     max-width: 600px;
-    margin:0 auto;
-    margin-top:40px;
+    margin: 40px auto 0;
     text-align: justify;
+    word-wrap: break-word;
     user-select: none;
 }
 
+/* ============================================================
+   页脚 (secFooter)
+   ============================================================ */
 .secFooter {
     height: 120px;
     background-color: rgba(255, 255, 255, 0.7);
@@ -705,32 +807,27 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    flex-direction: row;
-    padding:30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
-}
-
-.secFooter img {
-    height:50px;
-    pointer-events: none;
-    user-select: none;
-    margin-left:30px;
+    padding: 30px 50px;
 }
 
 .secFooter p {
-    color:#56626e;
-    font-size:15px;
+    color: #56626e;
+    font-size: 15px;
     user-select: none;
+    margin: 0;
+}
+
+.secFooter img {
+    height: 50px;
+    pointer-events: none;
+    user-select: none;
+    margin-left: 30px;
 }
 
 .secFooter_info {
-    display:flex;
-    box-sizing: border-box;
-    align-content: center;
+    display: flex;
+    align-items: center;
     flex-wrap: nowrap;
-    justify-content: flex-end;
 }
 
 .secFooter .user {
@@ -739,24 +836,112 @@ body {
 }
 
 .secFooter .user img {
-    width:28px;
-    height:28px;
-    margin-left:10px;
-    margin-right:10px;
+    width: 28px;
+    height: 28px;
     border-radius: 4px;
-    border:2px solid rgba(0,0,0,0.2);
-    flex-grow: 0;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   响应式适配
+   ============================================================ */
+@media screen and (max-width: 1400px) {
+    .secGoodRight {
+        padding-right: 10px;
+    }
+
+    .secGoodLeft > p {
+        margin-left: 10px;
+    }
+
+    .indisp {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .secIntro {
+        flex-wrap: wrap;
+    }
+
+    .secIntro .right {
+        margin-top:24px;
+        flex-grow: 1;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .secIntro .left {
+        padding:0;
+    }
+
+    .secIntro {
+        padding: 40px 80px;
+        padding-bottom:30px;
+    }
+
+    .secIntro .left > p {
+        max-width:none;
+    }
+
+    .secIntro .right {
+        overflow-x: scroll;
+    }
+
+    .secIntro .right .item {
+        margin-left:14px;
+        margin-right:14px;
+        margin-bottom:10px;
+        min-width: 180px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .secGoodRight {
+        display: none;
+    }
+
+    .secMember {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .secDisp {
+        padding: 30px;
+    }
+
+    .secVideo {
+        padding: 30px;
+    }
+
+    .secVideo_body iframe {
+        min-width: 90%;
+    }
+
+    .secFooter {
+        justify-content: center;
+        flex-wrap: wrap;
+        height:160px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .secIntro .right {
+        justify-content: space-between;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .logo_block {
-        width:300px;
-        margin-left:calc(50% - 150px);
+        width: 300px;
+        margin-left: calc(50% - 150px);
     }
 
     .secInfo {
-        padding-left:25px;
-        padding-right:25px;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .main-btn {
@@ -770,115 +955,21 @@ body {
     .nav_items_more {
         display: flex;
     }
-}
 
-@media screen and (max-width: 1000px) {
-    .secMember {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .secDisp {
-        padding:30px;
-    }
-
-    .secVideo_body iframe {
-        min-width: 90%;
-    }
-
-    .secVideo {
-        padding:30px;
+    .secIntro {
+        padding:40px;
     }
 
 }
-  
-@keyframes fadeInAnimation { 
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-     } 
-}
 
-.secGood {
-    position: fixed;
-    height:40px;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: #007ACC;
-    backdrop-filter: blur(10px);
-    margin:0px;
-    z-index: 20;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-.secGoodLeft {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-}
-
-.secGoodLeft>p {
-    color:white;
-    margin:0;
-    margin-left:30px;
-    user-select: none;
-    margin-right:10px;
-    min-width: 348px;
-}
-
-.secGood .button {
-    color:white;
-    padding:3px;
-    padding-left:8px;
-    padding-right:8px;
-    user-select: none;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-right: 4px;
-    transition: background-color 0.4s;
-}
-
-.secGood .button:hover {
-    background-color: #1194eb;
-}
-
-.secGood .button>a {
-    margin:0;
-    padding: 0;
-    color:white;
-    text-decoration: none;
-}
-
-.secGoodRight {
-    padding-right:30px;
-}
-
-.secGoodRight>p {
-    color:rgb(230, 230, 230);
-    padding: 0;
-    margin:0;
-    user-select: none;
-    font-style: italic;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-@media screen and (max-width: 1400px) {
-    .secGoodRight {
-        padding-right: 10px;
+/* ============================================================
+   动画关键帧
+   ============================================================ */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
     }
-
-    .secGoodLeft>p {
-        margin-left:10px;
-    }
-    
-    .indisp {
-        display: none;
+    100% {
+        opacity: 1;
     }
 }
