@@ -140,4 +140,10 @@
   } else {
     init();
   }
+
+  // 暴露卡片构建等接口，供搜索页等其它模块复用
+  window.CardLib = {
+    buildCard: buildCard,
+    sampleRandom: sampleRandom
+  };
 })();

@@ -973,3 +973,57 @@ body {
         opacity: 1;
     }
 }
+
+/* ============================================================
+   导航栏搜索条 (nav_search)
+   ============================================================ */
+.nav_search {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #c9d4e0;
+    border-radius: 18px;
+    overflow: hidden;
+    flex: 0 0 auto;
+}
+
+.nav_search_input {
+    width: 140px;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 6px 0 14px;
+    font-size: 13px;
+    color: #333;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.nav_search_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+    color: #7E96B3;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.18s, background-color 0.18s;
+}
+
+.nav_search_btn:hover {
+    color: #fff;
+    background-color: #007ACC;
+}
+
+@media screen and (max-width: 700px) {
+    .nav_search_input {
+        width: 90px;
+    }
+}

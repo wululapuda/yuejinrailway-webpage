@@ -55,7 +55,7 @@ window.CARD_LIBRARY = {
       "group": "内燃机车",
       "name": "东方红21型内燃机车",
       "img": "dfh21.png",
-      "authors": ["wllpd", "mzsj"],
+      "authors": ["wllpd"],
       "type": "IR",
       "desc": "DFH-21",
       "link": "https://yuejingroup.lanzn.com/iWjrO3mi4txa"
@@ -64,7 +64,7 @@ window.CARD_LIBRARY = {
       "group": "内燃机车",
       "name": "DF21型内燃机车",
       "img": "df21.png",
-      "authors": ["wllpd"],
+      "authors": ["wllpd","mzsj"],
       "type": "IR",
       "desc": "DF21"
     },
