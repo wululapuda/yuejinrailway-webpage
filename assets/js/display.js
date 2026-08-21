@@ -10,7 +10,8 @@ const imgUrls = [
   './assets/img/display/5.png',
   './assets/img/display/6.png',
   './assets/img/display/7.png',
-  './assets/img/display/8.png'
+  './assets/img/display/8.png',
+  './assets/img/display/9.png'
 ];
 
 const imgTexts = [
@@ -19,9 +20,10 @@ const imgTexts = [
   'HXD1 型机车',
   '百年滇越行',
   '毛号HXD3D',
-  '小站一角',
+  '25B型铁路客车',
   'HXD1擦肩而过',
-  'GK1E 型机车'
+  'GK1E 型机车',
+  'DF9 型机车'
 ];
 
 let currentIndex = 6;
