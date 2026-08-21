@@ -79,6 +79,14 @@ window.CARD_LIBRARY = {
     },
     {
       "group": "内燃机车",
+      "name": "DF9型内燃机车",
+      "img": "df9.png",
+      "authors": ["yyxyyx","wllpd"],
+      "type": "IR",
+      "desc": "DF-9",
+    },
+    {
+      "group": "内燃机车",
       "name": "DF5型内燃机车",
       "img": "DF5.png",
       "authors": ["wllpd"],
