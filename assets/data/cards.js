@@ -20,7 +20,7 @@ window.CARD_LIBRARY = {
     {
       "group": "电力机车",
       "name": "HXD3D型电力机车1893号",
-      "img": "HXD3d-1893.jpg",
+      "img": "HXD3d-1893.webp",
       "authors": ["wllpd", "mzsj"],
       "type": "IR",
       "desc": "HXD3D 1893",
@@ -29,7 +29,7 @@ window.CARD_LIBRARY = {
     {
       "group": "电力机车",
       "name": "SS3B型电力机车",
-      "img": "SS3B.png",
+      "img": "SS3B.webp",
       "authors": ["wllpd", "crh1"],
       "type": "IR",
       "desc": "SS3B",
@@ -38,7 +38,7 @@ window.CARD_LIBRARY = {
     {
       "group": "电力机车",
       "name": "HXD1型电力机车",
-      "img": "HXD1.png",
+      "img": "HXD1.webp",
       "authors": ["wllpd", "i9"],
       "type": "IR",
       "desc": "HXD1"
@@ -46,7 +46,7 @@ window.CARD_LIBRARY = {
     {
       "group": "电力机车",
       "name": "SS3型电力机车",
-      "img": "ss3.png",
+      "img": "ss3.webp",
       "authors": ["wllpd", "i9"],
       "type": "IR",
       "desc": "SS3"
@@ -54,7 +54,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "东方红21型内燃机车",
-      "img": "dfh21.png",
+      "img": "dfh21.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "DFH-21",
@@ -63,7 +63,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "DF21型内燃机车",
-      "img": "df21.png",
+      "img": "df21.webp",
       "authors": ["wllpd","mzsj"],
       "type": "IR",
       "desc": "DF21"
@@ -71,7 +71,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "DFH-5型内燃机车",
-      "img": "dfh5.png",
+      "img": "dfh5.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "DFH-5",
@@ -80,7 +80,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "DF9型内燃机车",
-      "img": "df9.png",
+      "img": "df9.webp",
       "authors": ["yyxyyx","wllpd"],
       "type": "IR",
       "desc": "DF-9",
@@ -88,7 +88,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "DF5型内燃机车",
-      "img": "DF5.png",
+      "img": "DF5.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "DF5",
@@ -97,7 +97,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "GK1E型内燃机车",
-      "img": "gk1e.png",
+      "img": "gk1e.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "GK1E"
@@ -105,7 +105,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "DF4B型内燃机车",
-      "img": "df4b.png",
+      "img": "df4b.webp",
       "authors": ["wllpd", "i9"],
       "type": "IR",
       "desc": "DF4B"
@@ -113,7 +113,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "ND5-I型内燃机车",
-      "img": "ND5I.png",
+      "img": "ND5I.webp",
       "authors": ["i9", "wllpd"],
       "type": "IR",
       "desc": "ND5-I"
@@ -121,7 +121,7 @@ window.CARD_LIBRARY = {
     {
       "group": "内燃机车",
       "name": "HXN5B型内燃机车",
-      "img": "HXN5.png",
+      "img": "HXN5.webp",
       "authors": ["i9", "wllpd"],
       "type": "IR",
       "desc": "HXN5B",
@@ -130,7 +130,7 @@ window.CARD_LIBRARY = {
     {
       "group": "蒸汽机车",
       "name": "上游型蒸汽机车",
-      "img": "sy1770.jpg",
+      "img": "sy1770.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "SY 1770"
@@ -140,25 +140,23 @@ window.CARD_LIBRARY = {
     {
       "group": "国铁现代客车",
       "name": "国铁25K系客车",
-      "img": "25k.png",
+      "img": "25k.webp",
       "authors": ["eE", "wllpd"],
       "type": "IR",
-      "desc": "YZ-25K",
-      "link": "./detail/yz25k.html"
+      "desc": "YZ-25K"
     },
     {
       "group": "国铁现代客车",
-      "name": "国铁YZ-25B型硬座车(2.1)",
-      "img": "YZ-25B.png",
+      "name": "国铁25B系客车(AO-1.0)",
+      "img": "YZ-25B.webp",
       "authors": ["sq"],
       "type": "IR",
-      "desc": "YZ-25B",
-      "link": "./detail/yz25b.html"
+      "desc": "YZ/YW/XL-25B"
     },
     {
       "group": "国铁现代客车",
       "name": "国铁WX-25K轨道检查车",
-      "img": "WX25K.png",
+      "img": "WX25K.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "WX-25K",
@@ -166,35 +164,32 @@ window.CARD_LIBRARY = {
     },
     {
       "group": "国铁初期客车",
-      "name": "国铁21系客车(4.0)",
-      "img": "YZ-21.png",
+      "name": "国铁YZ-21型客车(AO-1.0)",
+      "img": "YZ-21.webp",
       "authors": ["sq"],
       "type": "IR",
-      "desc": "YZ/YW/XL/UZ-21",
-      "link": "https://yuejingroup.lanzoup.com/iHAWX2m72x7e"
+      "desc": "YZ-21"
     },
     {
       "group": "国铁初期客车",
       "name": "国铁22系客车(4.1)",
-      "img": "YZ-22.png",
+      "img": "YZ-22.webp",
       "authors": ["sq"],
       "type": "IR",
-      "desc": "YZ/YW/XL/UZ/CA-22",
-      "link": "detail\\yz22.html"
+      "desc": "YZ/YW/XL/UZ/CA-22"
     },
     {
       "group": "国铁初期客车",
       "name": "国铁31型市郊客车(2.1)",
-      "img": "YZ-31.png",
+      "img": "YZ-31.webp",
       "authors": ["sq"],
       "type": "IR",
-      "desc": "YZ-31",
-      "link": "detail\\yz31.html"
+      "desc": "YZ-31"
     },
     {
       "group": "窄轨客车",
       "name": "米轨客车YZ-M1",
-      "img": "m1.png",
+      "img": "m1.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "YZ-M1",
@@ -204,7 +199,7 @@ window.CARD_LIBRARY = {
   "货车": [
     {
       "name": "C70型通用敞车",
-      "img": "C70.png",
+      "img": "C70.webp",
       "authors": ["i9", "wllpd"],
       "type": "IR",
       "desc": "C70",
@@ -212,7 +207,7 @@ window.CARD_LIBRARY = {
     },
     {
       "name": "GQ70型轻油罐车",
-      "img": "GQ70.png",
+      "img": "GQ70.webp",
       "authors": ["wllpd"],
       "type": "IR",
       "desc": "GQ70",
@@ -220,7 +215,7 @@ window.CARD_LIBRARY = {
     },
     {
       "name": "NX70共用平车",
-      "img": "NX70.png",
+      "img": "NX70.webp",
       "authors": ["i9", "wllpd"],
       "type": "IR",
       "desc": "NX70",
@@ -228,7 +223,7 @@ window.CARD_LIBRARY = {
     },
     {
       "name": "P70型通用棚车",
-      "img": "P70.png",
+      "img": "P70.webp",
       "authors": ["eE", "wllpd"],
       "type": "IR",
       "desc": "P70",
@@ -238,7 +233,7 @@ window.CARD_LIBRARY = {
   "主题包": [
     {
       "name": "最后的蒸汽小火车",
-      "img": "jiayang.png",
+      "img": "jiayang.webp",
       "authors": ["i9", "wllpd"],
       "type": "IR",
       "desc": "嘉阳窄轨小火车",
@@ -246,7 +241,7 @@ window.CARD_LIBRARY = {
     },
     {
       "name": "百年滇越行",
-      "img": "bndyx.jpg",
+      "img": "bndyx.webp",
       "authors": ["mzsj", "wllpd"],
       "type": "IR",
       "desc": "滇越铁路",
