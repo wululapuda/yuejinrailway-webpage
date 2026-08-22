@@ -16,7 +16,7 @@ body {
     animation: fadeInAnimation ease 1.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    background-image: url('../img/background.png');
+    background-image: url('../img/background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
