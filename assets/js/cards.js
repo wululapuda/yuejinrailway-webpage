@@ -11,7 +11,7 @@
  * 数据文件通过 <script> 标签加载（而非 fetch），因此本地双击打开 HTML 也能正常显示。
  *
  * 卡片数据中的 authors 只填作者代号（不带扩展名），本脚本会按 AUTHOR_EXT 对照表
- * 自动补齐 jpg/png 后缀；若新增的作者头像不是 jpg，请在 AUTHOR_EXT 中补充对应代号。
+ * 自动补齐 webp/png 后缀；若新增的作者头像不是 webp，请在 AUTHOR_EXT 中补充对应代号。
  *
  * 所有作者代号（头像文件均位于 assets/img/author/ 下）：
  *   wllpd（乌鲁拉普达）、i9（chuanshuoi9）、eE（eE....）、sq（苏秋1972）、mzsj（美洲大车司机）、
@@ -22,16 +22,16 @@
 
   /** 作者代号 → 头像扩展名（头像文件均位于 assets/img/author/ 下） */
   var AUTHOR_EXT = {
-    wllpd: 'jpg',
-    i9: 'jpg',
-    eE: 'jpg',
-    sq: 'jpg',
-    mzsj: 'jpg',
-    crh1: 'jpg',
-    djhjm: 'jpg',
-    lmy: 'jpg',
-    fischer: 'jpg',
-    yyxyyx: 'jpg'
+    wllpd: 'webp',
+    i9: 'webp',
+    eE: 'webp',
+    sq: 'webp',
+    mzsj: 'webp',
+    crh1: 'webp',
+    djhjm: 'webp',
+    lmy: 'webp',
+    fischer: 'webp',
+    yyxyyx: 'webp'
   };
 
   /** 从数组中随机抽取 count 张（不重复），保持抽取顺序 */
@@ -73,7 +73,7 @@
     author.className = 'secInfo_Author';
     (card.authors || []).forEach(function (name) {
       var aImg = document.createElement('img');
-      aImg.src = 'assets/img/author/' + name + '.' + (AUTHOR_EXT[name] || 'jpg');
+      aImg.src = 'assets/img/author/' + name + '.' + (AUTHOR_EXT[name] || 'webp');
       author.appendChild(aImg);
     });
     var p = document.createElement('p');

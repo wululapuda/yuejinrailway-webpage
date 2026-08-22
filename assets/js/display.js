@@ -3,15 +3,15 @@
  */
 
 const imgUrls = [
-  './assets/img/display/1.png',
-  './assets/img/display/2.png',
-  './assets/img/display/3.png',
-  './assets/img/display/4.png',
-  './assets/img/display/5.png',
-  './assets/img/display/6.png',
-  './assets/img/display/7.png',
-  './assets/img/display/8.png',
-  './assets/img/display/9.png'
+  './assets/img/display/1.webp',
+  './assets/img/display/2.webp',
+  './assets/img/display/3.webp',
+  './assets/img/display/4.webp',
+  './assets/img/display/5.webp',
+  './assets/img/display/6.webp',
+  './assets/img/display/7.webp',
+  './assets/img/display/8.webp',
+  './assets/img/display/9.webp'
 ];
 
 const imgTexts = [
